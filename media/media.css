@@ -29,6 +29,7 @@
         grid-template-rows: repeat(2, auto);
     -ms-grid-columns: (auto)[2];
         grid-template-columns: repeat(2, auto);
+    row-gap: 40px;
   }
   .booking {
     -ms-grid-columns: 1fr;
@@ -39,6 +40,7 @@
   }
   .video {
     width: 480px;
+    height: 320px;
   }
   .answers {
     justify-items: center;
@@ -91,6 +93,82 @@
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1 / 2;
+  }
+}
+
+@media (max-width: 575px) {
+  .header {
+    row-gap: 30px;
+  }
+  .header-nav {
+    -ms-grid-columns: (auto)[3];
+        grid-template-columns: repeat(3, auto);
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+    row-gap: 10px;
+    justify-items: start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header-nav__link:last-child {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3 / 4;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  .hero-title {
+    font-size: 2.4rem;
+    max-width: 400px;
+  }
+  .hero-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+  .number {
+    display: none;
+  }
+  .appartaments-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (1fr)[4];
+        grid-template-rows: repeat(4, 1fr);
+    row-gap: 50px;
+  }
+  .appartaments-container__card-image {
+    width: 280px;
+  }
+  .booking-container-1 {
+    max-width: 255px;
+  }
+  .booking-container-2 {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .video {
+    width: 320px;
+    height: 200px;
+  }
+  .footer {
+    -ms-grid-rows: (auto)[4];
+        grid-template-rows: repeat(4, auto);
+    padding: 60px 80px;
+  }
+  .footer-nav-2 {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3 / 4;
+    -ms-grid-column-align: start;
+        justify-self: start;
+    margin: 0;
+  }
+  .footer-container {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / 5;
   }
 }
 /*# sourceMappingURL=media.css.map */

@@ -168,11 +168,11 @@ body {
 }
 
 .about {
-    padding: 120px 20px;
+    padding: 120px 10px;
     max-width: 850px;
     display: grid;
     grid-template-columns: repeat(4, auto);
-    column-gap: 40px;
+    column-gap: 30px;
     @include items(center, start);
 
     &-card {

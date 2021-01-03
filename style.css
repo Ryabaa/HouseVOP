@@ -182,14 +182,14 @@ body {
 }
 
 .about {
-  padding: 120px 20px;
+  padding: 120px 10px;
   max-width: 850px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (auto)[4];
       grid-template-columns: repeat(4, auto);
-  -webkit-column-gap: 40px;
-          column-gap: 40px;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
   justify-items: center;
   -webkit-box-align: start;
       -ms-flex-align: start;
