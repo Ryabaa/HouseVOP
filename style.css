@@ -103,6 +103,7 @@ body {
 
 .hero-title {
   font-size: 3rem;
+  text-align: center;
 }
 
 .hero-container {
@@ -128,7 +129,8 @@ body {
 }
 
 .hero-container__card-text {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  text-align: center;
 }
 
 .main {
@@ -144,6 +146,39 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
+}
+
+.number {
+  font-family: "Playfair Display";
+  font-weight: bold;
+  font-size: 400px;
+  color: #fff;
+  opacity: 0.1;
+}
+
+.number-2 {
+  position: absolute;
+  top: -100px;
+  right: 50px;
+}
+
+.number-3 {
+  position: absolute;
+  top: 360px;
+  left: 50px;
+}
+
+.number-4 {
+  position: absolute;
+  bottom: 700px;
+  right: 50px;
+}
+
+.number-5 {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
 }
 
 .about {
@@ -290,6 +325,7 @@ body {
 }
 
 .booking-container-1 {
+  max-width: 535px;
   padding: 0 10px;
   display: -ms-grid;
   display: grid;
@@ -301,7 +337,6 @@ body {
 }
 
 .booking-container-1__text {
-  max-width: 535px;
   font-size: 1.14rem;
 }
 
@@ -316,6 +351,10 @@ body {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: end;
+}
+
+.video {
+  width: 860px;
 }
 
 .map {

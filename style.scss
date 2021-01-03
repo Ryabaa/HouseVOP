@@ -108,6 +108,7 @@ body {
 
     &-title {
         font-size: 3rem;
+        text-align: center;
     }
 
     &-container {
@@ -122,7 +123,8 @@ body {
             column-gap: 15px;
 
             &-text {
-                font-size: 1.4rem;
+                font-size: 1.3rem;
+                text-align: center;
             }
         }
     }
@@ -133,6 +135,36 @@ body {
     display: flex;
     @include items(unset, center);
     flex-direction: column;
+    position: relative;
+}
+
+.number {
+    font-family: "Playfair Display";
+    font-weight: bold;
+    font-size: 400px;
+    color: $color-primary;
+    opacity: 0.1;
+
+    &-2 {
+        position: absolute;
+        top: -100px;
+        right: 50px;
+    }
+    &-3 {
+        position: absolute;
+        top: 360px;
+        left: 50px;
+    }
+    &-4 {
+        position: absolute;
+        bottom: 700px;
+        right: 50px;
+    }
+    &-5 {
+        position: absolute;
+        bottom: 50px;
+        left: 50px;
+    }
 }
 
 .about {
@@ -257,13 +289,13 @@ body {
     @include items(center, end);
 
     &-container-1 {
+        max-width: 535px;
         padding: 0 10px;
         display: grid;
         row-gap: 40px;
         @include items(start, start);
 
         &__text {
-            max-width: 535px;
             font-size: 1.14rem;
         }
     }
@@ -275,6 +307,10 @@ body {
         grid-gap: 25px;
         @include items(center, end);
     }
+}
+
+.video {
+    width: 860px;
 }
 
 .map {
