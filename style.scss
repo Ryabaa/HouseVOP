@@ -4,6 +4,7 @@ $color-accent: #d4c17f;
 $color-postscript: #e7e7e7;
 $color-input: #555;
 $bg-input: #fff;
+$bg-secondary: #2d343c;
 
 /////////////////////////////////
 
@@ -93,11 +94,9 @@ body {
         &__link {
             color: $color-primary;
             line-height: 22px;
-            @include transist;
 
             &:hover {
                 color: $color-accent;
-                border-bottom: $color-primary 1px solid;
             }
         }
     }
@@ -301,5 +300,54 @@ body {
         flex-wrap: wrap;
         @include items(center, end);
         column-gap: 20px;
+    }
+}
+
+.footer {
+    background: $bg-secondary;
+    padding: 60px 20px;
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    column-gap: 8%;
+    justify-content: center;
+    @include items(center, start);
+
+    &-nav {
+        display: grid;
+        row-gap: 15px;
+
+        &__link {
+            letter-spacing: 0.05em;
+            color: $color-primary;
+
+            &:hover {
+                color: $color-accent;
+            }
+        }
+    }
+
+    &-container {
+        display: grid;
+        row-gap: 15px;
+
+        &__text {
+            letter-spacing: 0.05em;
+
+            &-link {
+                color: $color-accent;
+            }
+        }
+
+        &__card {
+            display: grid;
+            grid-template-columns: repeat(4, auto);
+            display: grid;
+            max-width: 175px;
+            @include items(start, center);
+
+            &-link:hover {
+                opacity: 0.7;
+            }
+        }
     }
 }
