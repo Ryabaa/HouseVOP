@@ -277,3 +277,11 @@ body {
         @include items(center, end);
     }
 }
+
+.map {
+    padding: 180px;
+    width: 80%;
+    display: grid;
+    row-gap: 100px;
+    @include items(center, center);
+}
