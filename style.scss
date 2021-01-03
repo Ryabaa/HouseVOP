@@ -2,7 +2,7 @@ $color-primary: #fff;
 $bg-primary: #242b33;
 $color-accent: #d4c17f;
 $color-postscript: #e7e7e7;
-$color-input: #bebebe;
+$color-input: #555;
 $bg-input: #fff;
 
 /////////////////////////////////
@@ -47,7 +47,6 @@ body {
     font-size: 36px;
     color: $color-accent;
     max-width: 520px;
-    text-align: center;
 }
 
 .logo-card {
@@ -164,6 +163,7 @@ body {
 }
 
 .appartaments {
+    padding: 0 20px;
     display: grid;
     row-gap: 100px;
     @include items(start, center);
@@ -178,7 +178,7 @@ body {
             position: relative;
 
             &-image {
-                width: 400px;
+                width: 99%;
             }
 
             &-text {
@@ -188,5 +188,92 @@ body {
                 font-size: 1.3rem;
             }
         }
+    }
+}
+
+.postscript {
+    font-size: 0.8rem;
+    max-width: 255px;
+    text-align: center;
+    color: $color-postscript;
+}
+
+.input {
+    width: 250px;
+    height: 50px;
+    background: $bg-input;
+    opacity: 0.4;
+    text-align: center;
+    border: none;
+    outline: none;
+    @include transist;
+
+    &::-webkit-input-placeholder {
+        color: $color-input;
+    }
+    &::-moz-placeholder {
+        color: $color-input;
+    }
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.button {
+    border: none;
+    background: $color-accent;
+    width: 250px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 1.14rem;
+    color: $color-primary;
+    @include transist;
+
+    &:hover {
+        border: 1px solid $color-accent;
+        background: none;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.booking {
+    background: linear-gradient(
+            180deg,
+            #242b33 10.42%,
+            rgba(36, 43, 51, 0) 50.52%,
+            #242b33 90.1%
+        ),
+        linear-gradient(0deg, rgba(36, 43, 51, 0.9), rgba(36, 43, 51, 0.9)),
+        url(./src/booking-bg.png), #c4c4c4 center;
+    background-size: cover;
+    width: 100%;
+    padding: 180px 0;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    @include items(center, end);
+
+    &-container-1 {
+        padding: 0 10px;
+        display: grid;
+        row-gap: 40px;
+        @include items(start, start);
+
+        &__text {
+            max-width: 535px;
+            font-size: 1.14rem;
+        }
+    }
+
+    &-container-2 {
+        padding: 0 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 25px;
+        @include items(center, end);
     }
 }
