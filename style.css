@@ -242,6 +242,14 @@ body {
   position: relative;
 }
 
+.appartaments-container__card:hover::after {
+  content: attr(data-title);
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  font-size: 1.13rem;
+}
+
 .appartaments-container__card-image {
   width: 99%;
 }
@@ -265,9 +273,10 @@ body {
   height: 50px;
   background: #fff;
   opacity: 0.4;
-  text-align: center;
+  text-indent: 40px;
   border: none;
   outline: none;
+  cursor: pointer;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
@@ -281,7 +290,11 @@ body {
 }
 
 .input:hover {
-  opacity: 0.8;
+  opacity: 0.6;
+}
+
+.input:focus {
+  opacity: 0.9;
 }
 
 .button {
@@ -292,6 +305,7 @@ body {
   font-weight: bold;
   font-size: 1.14rem;
   color: #fff;
+  cursor: pointer;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
@@ -303,6 +317,10 @@ body {
 
 .button:focus {
   outline: none;
+}
+
+.button:active {
+  background: #d4c17f;
 }
 
 .booking {

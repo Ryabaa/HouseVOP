@@ -208,6 +208,14 @@ body {
         &__card {
             position: relative;
 
+            &:hover::after {
+                content: attr(data-title);
+                position: absolute;
+                top: 20px;
+                right: 10px;
+                font-size: 1.13rem;
+            }
+
             &-image {
                 width: 99%;
             }
@@ -234,9 +242,10 @@ body {
     height: 50px;
     background: $bg-input;
     opacity: 0.4;
-    text-align: center;
+    text-indent: 40px;
     border: none;
     outline: none;
+    cursor: pointer;
     @include transist;
 
     &::-webkit-input-placeholder {
@@ -247,7 +256,11 @@ body {
     }
 
     &:hover {
-        opacity: 0.8;
+        opacity: 0.6;
+    }
+
+    &:focus {
+        opacity: 0.9;
     }
 }
 
@@ -259,6 +272,7 @@ body {
     font-weight: bold;
     font-size: 1.14rem;
     color: $color-primary;
+    cursor: pointer;
     @include transist;
 
     &:hover {
@@ -268,6 +282,10 @@ body {
 
     &:focus {
         outline: none;
+    }
+
+    &:active {
+        background: $color-accent;
     }
 }
 

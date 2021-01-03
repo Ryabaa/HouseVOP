@@ -144,6 +144,9 @@
   .booking-container-1 {
     max-width: 255px;
   }
+  .booking-container-1__title {
+    font-size: 1.53rem;
+  }
   .booking-container-2 {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -156,6 +159,10 @@
     -ms-grid-rows: (auto)[4];
         grid-template-rows: repeat(4, auto);
     padding: 60px 80px;
+  }
+  .footer .logo-card {
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
   .footer-nav-2 {
     -ms-grid-row: 3;

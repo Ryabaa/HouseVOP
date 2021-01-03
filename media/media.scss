@@ -130,6 +130,10 @@
     .booking {
         &-container-1 {
             max-width: 255px;
+
+            &__title {
+                font-size: 1.53rem;
+            }
         }
 
         &-container-2 {
@@ -145,6 +149,10 @@
     .footer {
         grid-template-rows: repeat(4, auto);
         padding: 60px 80px;
+
+        .logo-card {
+            justify-self: center;
+        }
 
         &-nav {
             &-2 {
