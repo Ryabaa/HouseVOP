@@ -1,0 +1,13 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+* {
+  scroll-behavior: smooth;
+  font-size: 100%;
+  font-weight: normal;
+  text-decoration: none;
+}
+
+html {
+  font-size: 14px;
+  font-family: Raleway;
+}
+/*# sourceMappingURL=style.css.map */
