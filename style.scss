@@ -1,4 +1,9 @@
-$lol: red;
+$color-primary: #fff;
+$bg-primary: #242b33;
+$color-accent: #d4c17f;
+$color-postscript: #e7e7e7;
+$color-input: #bebebe;
+$bg-input: #fff;
 
 /////////////////////////////////
 
@@ -7,11 +12,120 @@ $lol: red;
     font-size: 100%;
     font-weight: normal;
     text-decoration: none;
+    margin: 0;
+}
+
+body {
+    font-size: 14px;
+    font-family: Raleway;
+    color: $color-primary;
 }
 
 @import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:regular,500,600,700,800,900,italic,500italic,600italic,700italic,800italic,900italic);
 
-html {
-    font-size: 14px;
-    font-family: Raleway;
+@font-face {
+    font-family: Post;
+    font-style: normal;
+    font-weight: normal;
+    src: local("Post"),
+        url("./src/Post-No-Bills-Jaffna-SemiBold.ttf.woff") format("woff");
+}
+
+@mixin items($jitems, $aitems) {
+    justify-items: $jitems;
+    align-items: $aitems;
+}
+
+@mixin transist {
+    transition: all 0.4s ease;
+}
+
+.title {
+    font-family: "Playfair Display";
+    font-weight: bold;
+    font-size: 36px;
+    color: $color-accent;
+    max-width: 520px;
+    text-align: center;
+}
+
+.logo-card {
+    display: grid;
+
+    .logo {
+        font-family: Post;
+        font-size: 2.57rem;
+
+        &-subtitle {
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+    }
+}
+
+.header-hero {
+    height: 840px;
+    background: linear-gradient(
+            180deg,
+            #242b33 11.98%,
+            rgba(52, 67, 83, 0.38) 51.04%,
+            #242b33 92.19%
+        ),
+        url(./src/header-bg.png) center;
+    background-size: cover;
+    display: grid;
+    grid-template-rows: 1fr 6fr;
+}
+
+.header {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    @include items(center, center);
+
+    &-nav {
+        display: grid;
+        grid-column: 2 / 3;
+        column-gap: 30px;
+        grid-template-columns: repeat(5, auto);
+        @include items(center, center);
+
+        &__link {
+            color: $color-primary;
+            line-height: 22px;
+            @include transist;
+
+            &:hover {
+                color: $color-accent;
+                border-bottom: $color-primary 1px solid;
+            }
+        }
+    }
+}
+
+.hero {
+    display: grid;
+    @include items(center, center);
+
+    &-title {
+        font-size: 3rem;
+    }
+
+    &-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 80px;
+        @include items(start, center);
+
+        &__card {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            column-gap: 15px;
+
+            &-text {
+                font-size: 1.4rem;
+            }
+        }
+    }
 }

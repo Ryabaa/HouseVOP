@@ -1,13 +1,137 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:regular,500,600,700,800,900,italic,500italic,600italic,700italic,800italic,900italic);
 * {
   scroll-behavior: smooth;
   font-size: 100%;
   font-weight: normal;
   text-decoration: none;
+  margin: 0;
 }
 
-html {
+body {
   font-size: 14px;
   font-family: Raleway;
+  color: #fff;
+}
+
+@font-face {
+  font-family: Post;
+  font-style: normal;
+  font-weight: normal;
+  src: local("Post"), url("./src/Post-No-Bills-Jaffna-SemiBold.ttf.woff") format("woff");
+}
+
+.title {
+  font-family: "Playfair Display";
+  font-weight: bold;
+  font-size: 36px;
+  color: #d4c17f;
+  max-width: 520px;
+  text-align: center;
+}
+
+.logo-card {
+  display: -ms-grid;
+  display: grid;
+}
+
+.logo-card .logo {
+  font-family: Post;
+  font-size: 2.57rem;
+}
+
+.logo-card .logo-subtitle {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.header-hero {
+  height: 840px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(11.98%, #242b33), color-stop(51.04%, rgba(52, 67, 83, 0.38)), color-stop(92.19%, #242b33)), url(./src/header-bg.png) center;
+  background: linear-gradient(180deg, #242b33 11.98%, rgba(52, 67, 83, 0.38) 51.04%, #242b33 92.19%), url(./src/header-bg.png) center;
+  background-size: cover;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 6fr;
+      grid-template-rows: 1fr 6fr;
+}
+
+.header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-nav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2 / 3;
+  -webkit-column-gap: 30px;
+          column-gap: 30px;
+  -ms-grid-columns: (auto)[5];
+      grid-template-columns: repeat(5, auto);
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-nav__link {
+  color: #fff;
+  line-height: 22px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.header-nav__link:hover {
+  color: #d4c17f;
+  border-bottom: #fff 1px solid;
+}
+
+.hero {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero-title {
+  font-size: 3rem;
+}
+
+.hero-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-column-gap: 80px;
+          column-gap: 80px;
+  justify-items: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero-container__card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[2];
+      grid-template-columns: repeat(2, auto);
+  -webkit-column-gap: 15px;
+          column-gap: 15px;
+}
+
+.hero-container__card-text {
+  font-size: 1.4rem;
 }
 /*# sourceMappingURL=style.css.map */
