@@ -134,4 +134,50 @@ body {
 .hero-container__card-text {
   font-size: 1.4rem;
 }
+
+.main {
+  background: #242b33;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about {
+  padding: 120px 0;
+  min-height: 180px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[4];
+      grid-template-columns: repeat(4, auto);
+  -webkit-column-gap: 70px;
+          column-gap: 70px;
+  justify-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+}
+
+.about-card {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 50px;
+  justify-items: center;
+  -webkit-box-align: unset;
+      -ms-flex-align: unset;
+          align-items: unset;
+}
+
+.about-card__text {
+  font-weight: 300;
+  font-size: 1.2rem;
+  max-width: 190px;
+  text-align: center;
+}
+
+.about-card__text-last {
+  max-width: 120px;
+}
 /*# sourceMappingURL=style.css.map */
