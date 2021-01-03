@@ -150,7 +150,7 @@ body {
 }
 
 .about {
-  padding: 120px 0;
+  padding: 120px 20px;
   max-width: 850px;
   display: -ms-grid;
   display: grid;
@@ -322,7 +322,7 @@ body {
 }
 
 .map {
-  padding: 180px;
+  padding: 180px 0;
   width: 80%;
   display: -ms-grid;
   display: grid;
@@ -331,5 +331,38 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.answers {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (auto)[2];
+      grid-template-rows: repeat(2, auto);
+  row-gap: 50px;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  padding: 0 20px 180px;
+  justify-items: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.answers-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  row-gap: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  justify-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
 }
 /*# sourceMappingURL=style.css.map */
