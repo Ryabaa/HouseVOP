@@ -133,15 +133,16 @@ body {
 .main {
     background: $bg-primary;
     display: flex;
-    justify-content: center;
+    @include items(unset, center);
+    flex-direction: column;
 }
 
 .about {
     padding: 120px 0;
-    min-height: 180px;
+    max-width: 850px;
     display: grid;
     grid-template-columns: repeat(4, auto);
-    column-gap: 70px;
+    column-gap: 40px;
     @include items(center, start);
 
     &-card {
@@ -157,6 +158,34 @@ body {
 
             &-last {
                 max-width: 120px;
+            }
+        }
+    }
+}
+
+.appartaments {
+    display: grid;
+    row-gap: 100px;
+    @include items(start, center);
+
+    &-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 25px;
+
+        &__card {
+            position: relative;
+
+            &-image {
+                width: 400px;
+            }
+
+            &-text {
+                position: absolute;
+                left: 40px;
+                bottom: 40px;
+                font-size: 1.3rem;
             }
         }
     }
